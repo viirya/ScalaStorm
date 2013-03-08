@@ -1,4 +1,4 @@
-import sbtrelease.Release._
+import sbtrelease.ReleasePlugin._
 
 
 name := "scala-storm"
@@ -17,6 +17,8 @@ resolvers ++= Seq("clojars" at "http://clojars.org/repo/",
                   "clojure-releases" at "http://build.clojure.org/releases")
 
 libraryDependencies += "storm" % "storm" % "0.8.1"
+
+libraryDependencies += "org.mongodb" %% "casbah" % "2.5.0"
 
 // This is to prevent error [java.lang.OutOfMemoryError: PermGen space]
 javaOptions += "-XX:MaxPermSize=1g"
